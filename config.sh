@@ -178,7 +178,10 @@ case "$1" in
 	echo DEVICE=flo >> .tmp-config &&
 	repo_sync $1
 	;;
-
+	
+"HTC Desire HD")
+	echo DEVICE=HTC Desire HD >> .tmp-config &&
+	echo PRODUCT_NAME=ACE9191 >> .tmp-config &&
 *)
 	echo "Usage: $0 [-cdflnq] (device name)"
 	echo "Flags are passed through to |./repo sync|."
@@ -215,6 +218,7 @@ case "$1" in
 	echo - emulator-x86
 	echo - emulator-x86-jb
 	echo - emulator-x86-kk
+	echo - HTC Desire HD
 	exit -1
 	;;
 esac
